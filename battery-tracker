@@ -1,0 +1,8 @@
+#!/bin/bash
+
+clear
+
+echo "Battery Tracker for OSX"
+echo ""
+
+while true; do date '+%X'; pmset -g batt; sleep 60; done
