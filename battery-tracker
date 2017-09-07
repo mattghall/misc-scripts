@@ -5,4 +5,9 @@ clear
 echo "Battery Tracker for OSX"
 echo ""
 
-while true; do date '+%X'; pmset -g batt; sleep 60; done
+while true; 
+do 
+echo -n `date +"%m-%d %H:%M:%S"`
+echo -n ", "
+pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f1 -d';'; sleep 1; 
+done
