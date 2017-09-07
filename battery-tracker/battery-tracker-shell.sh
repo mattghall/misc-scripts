@@ -1,10 +1,4 @@
 #!/bin/bash
-
-clear
-
-echo "Battery Tracker for OSX"
-echo ""
-
 while true; 
 do 
 echo -n `date +"%m-%d %H:%M:%S"`
